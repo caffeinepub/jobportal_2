@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Cabinet Grotesk (Display) ─── */
+@font-face {
+  font-family: "Cabinet Grotesk";
+  src: url("/assets/fonts/CabinetGrotesk-Variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ─── Satoshi (Body) ─── */
+@font-face {
+  font-family: "Satoshi";
+  src: url("/assets/fonts/Satoshi-Variable.woff2") format("woff2");
+  font-weight: 300 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+
+    /* Light mode */
+    --background: 0.97 0.005 250;
+    --foreground: 0.15 0.02 250;
+    --card: 1 0 0;
+    --card-foreground: 0.15 0.02 250;
+    --popover: 1 0 0;
+    --popover-foreground: 0.15 0.02 250;
+    --primary: 0.55 0.18 220;
+    --primary-foreground: 0.99 0 0;
+    --secondary: 0.93 0.01 250;
+    --secondary-foreground: 0.25 0.02 250;
+    --muted: 0.93 0.01 250;
+    --muted-foreground: 0.52 0.02 250;
+    --accent: 0.72 0.18 210;
+    --accent-foreground: 0.99 0 0;
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+    --border: 0.88 0.01 250;
+    --input: 0.88 0.01 250;
+    --ring: 0.55 0.18 220;
+
+    /* Status colors */
+    --success: 0.62 0.17 145;
+    --success-foreground: 0.99 0 0;
+    --warning: 0.78 0.18 70;
+    --warning-foreground: 0.15 0 0;
+    --info: 0.58 0.18 240;
+    --info-foreground: 0.99 0 0;
+
+    --chart-1: 0.55 0.18 220;
+    --chart-2: 0.62 0.17 145;
+    --chart-3: 0.78 0.18 70;
+    --chart-4: 0.65 0.20 290;
+    --chart-5: 0.58 0.24 27;
+    --sidebar: 0.99 0 0;
+    --sidebar-foreground: 0.15 0.02 250;
+    --sidebar-primary: 0.55 0.18 220;
+    --sidebar-primary-foreground: 0.985 0 0;
+    --sidebar-accent: 0.93 0.01 250;
+    --sidebar-accent-foreground: 0.25 0.02 250;
+    --sidebar-border: 0.88 0.01 250;
+    --sidebar-ring: 0.55 0.18 220;
+  }
+
+  .dark {
+    --background: 0.13 0.02 255;
+    --foreground: 0.95 0.01 250;
+    --card: 0.17 0.025 255;
+    --card-foreground: 0.95 0.01 250;
+    --popover: 0.20 0.025 255;
+    --popover-foreground: 0.95 0.01 250;
+    --primary: 0.68 0.18 220;
+    --primary-foreground: 0.10 0.02 255;
+    --secondary: 0.22 0.025 255;
+    --secondary-foreground: 0.95 0.01 250;
+    --muted: 0.22 0.025 255;
+    --muted-foreground: 0.62 0.02 250;
+    --accent: 0.72 0.18 210;
+    --accent-foreground: 0.10 0.02 255;
+    --destructive: 0.65 0.22 25;
+    --destructive-foreground: 0.985 0 0;
+    --border: 0.25 0.025 255;
+    --input: 0.25 0.025 255;
+    --ring: 0.68 0.18 220;
+
+    /* Status colors */
+    --success: 0.68 0.17 145;
+    --success-foreground: 0.10 0 0;
+    --warning: 0.80 0.18 75;
+    --warning-foreground: 0.10 0 0;
+    --info: 0.65 0.18 240;
+    --info-foreground: 0.10 0 0;
+
+    --chart-1: 0.68 0.18 220;
+    --chart-2: 0.68 0.17 145;
+    --chart-3: 0.80 0.18 75;
+    --chart-4: 0.68 0.20 290;
+    --chart-5: 0.68 0.22 27;
+    --sidebar: 0.17 0.025 255;
+    --sidebar-foreground: 0.95 0.01 250;
+    --sidebar-primary: 0.68 0.18 220;
+    --sidebar-primary-foreground: 0.985 0 0;
+    --sidebar-accent: 0.22 0.025 255;
+    --sidebar-accent-foreground: 0.95 0.01 250;
+    --sidebar-border: 0.25 0.025 255;
+    --sidebar-ring: 0.68 0.18 220;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .scrollbar-thin {
+    scrollbar-width: thin;
+  }
+  .glass {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+}
